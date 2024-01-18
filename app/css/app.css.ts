@@ -1,7 +1,13 @@
 import { globalStyle } from "@vanilla-extract/css";
 import { vars } from "./theme.css";
-import { base, htmlFontSize, baselinePX } from "./base";
-import queries from "./queries";
+// import { base, htmlFontSize, baselinePX } from "./base";
+// import queries from "./queries";
+
+const htmlFontSize = 18;
+const baselinePX = 20;
+
+const base = (multiplier = 1): string =>
+  `${(baselinePX / htmlFontSize) * multiplier}rem`;
 
 const heading = {
   fontFamily: vars.font.inter,
@@ -18,11 +24,6 @@ globalStyle("html", {
   fontSize: htmlFontSize,
   height: "100%",
   lineHeight: `${baselinePX}px`,
-  "@media": {
-    [queries.m]: {
-      fontSize: htmlFontSize * 0.8,
-    },
-  },
 });
 globalStyle("html, body", {
   margin: 0,
