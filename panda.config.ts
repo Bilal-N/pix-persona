@@ -58,6 +58,11 @@ export default defineConfig({
       //     value: "spin 1s linear infinite",
       //   },
       // },
+      zIndex: {
+        page: { value: 10 },
+        modal: { value: 20 },
+        header: { value: 30 },
+      },
     },
     breakpoints: {
       xs: "400px",

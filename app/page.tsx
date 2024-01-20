@@ -2,6 +2,8 @@ import Header from "./components/layout/Header";
 import HeroSection from "./components/HeroSection";
 import MobileAppPrototype from "./components/MobileAppPrototype";
 import Content from "./components/Content";
+import Slider from "./components/Slider";
+import TestimonialSlider from "./components/TestimonialSlider";
 import Footer from "./components/layout/Footer";
 import colors from "./css/colors";
 
@@ -199,10 +201,16 @@ export default function Home() {
       <HeroSection />
       <MobileAppPrototype videoSource={"/showreel.webm"} />
       <Content data={content1} color={colors.white} bgColor={colors.bluish} />
-      <MobileAppPrototype videoSource={"/showreel2.webm"} />
+      <Slider />
       <Content data={content2} color={colors.black} bgColor={colors.white} />
       <MobileAppPrototype videoSource={"/showreel2.webm"} />
       <Content data={content3} bgColor={colors.white} />
+      <section>
+        <div style={{ backgroundColor: "black" }}>
+          <TestimonialSlider />
+        </div>
+      </section>
+      <MobileAppPrototype videoSource={"/showreel2.webm"} />
       <Footer />
     </>
   );
