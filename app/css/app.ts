@@ -13,9 +13,10 @@ export const globalCss = defineGlobalStyles({
   html: {
     fontFamily: "token(fonts.inter)",
     fontWeight: "bold",
-    fontSize: htmlFontSize * 0.8,
+    fontSize: htmlFontSize * 0.6,
     lineHeight: `${baselinePX}px`,
     height: "100%",
+    sm: { fontSize: htmlFontSize * 0.8 },
     md: { fontSize: htmlFontSize },
   },
   h1: { ...h1 },

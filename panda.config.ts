@@ -1,6 +1,7 @@
 import { defineConfig } from "@pandacss/dev";
 import { globalCss } from "./app/css/app";
 import colors from "./app/css/colors";
+import { keyframes } from "./app/css/keyframes";
 
 export default defineConfig({
   // Whether to use css reset
@@ -52,6 +53,11 @@ export default defineConfig({
         inter: { value: "var(--font-inter), sans-serif" },
       },
       spacing: {},
+      // animations: {
+      //   slideAndFadeInUp: {
+      //     value: "spin 1s linear infinite",
+      //   },
+      // },
     },
     breakpoints: {
       xs: "400px",
@@ -61,6 +67,7 @@ export default defineConfig({
       xl: "1600px",
       "2xl": "1920px",
     },
+    keyframes,
   },
 
   globalCss,
