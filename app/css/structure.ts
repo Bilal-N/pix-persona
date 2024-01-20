@@ -1,1 +1,1 @@
-export const gridContainerWidth = 1080;
+export const gridContainerWidth = "1080px";

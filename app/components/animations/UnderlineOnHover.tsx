@@ -2,7 +2,12 @@
 
 const UnderlineOnHover = ({ content = null, classes = null }) => {
   return (
-    <>{/* <span className={[classes].join(" ")}>{content.text}</span> */}</>
+    <>
+      <span className={[classes].join(" ")}>
+        {content.text}
+        <i></i>
+      </span>
+    </>
   );
 };
 

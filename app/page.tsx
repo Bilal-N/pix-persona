@@ -1,7 +1,9 @@
 import Header from "./components/layout/Header";
 import HeroSection from "./components/HeroSection";
 import MobileAppPrototype from "./components/MobileAppPrototype";
+import Content from "./components/Content";
 import Footer from "./components/layout/Footer";
+import colors from "./css/colors";
 
 export default function Home() {
   let content1 = [
@@ -195,7 +197,12 @@ export default function Home() {
     <>
       <Header />
       <HeroSection />
-      <MobileAppPrototype />
+      <MobileAppPrototype videoSource={"/showreel.webm"} />
+      <Content data={content1} color={colors.white} bgColor={colors.bluish} />
+      <MobileAppPrototype videoSource={"/showreel2.webm"} />
+      <Content data={content2} color={colors.black} bgColor={colors.white} />
+      <MobileAppPrototype videoSource={"/showreel2.webm"} />
+      <Content data={content3} bgColor={colors.white} />
       <Footer />
     </>
   );

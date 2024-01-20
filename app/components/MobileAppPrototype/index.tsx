@@ -3,7 +3,7 @@ import Image from "next/image";
 import mobileAppPrototypeImage from "../../../public/mobile-app-prototype.png";
 import { mobileAppPrototype } from "./styles";
 
-const MobileAppPrototype = () => {
+const MobileAppPrototype = ({ videoSource }) => {
   return (
     <section>
       <div className={mobileAppPrototype}>
@@ -12,7 +12,7 @@ const MobileAppPrototype = () => {
           autoPlay={true}
           preload="metadata"
           playsInline={true}
-          src="/showreel.webm"
+          src={videoSource}
           muted={true}
           style={{
             maxWidth: "100%",

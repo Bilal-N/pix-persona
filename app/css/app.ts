@@ -2,6 +2,7 @@ import { defineGlobalStyles } from "@pandacss/dev";
 import colors from "./colors";
 import { base, baselinePX, htmlFontSize } from "./base";
 import { h1, h2, h3, body } from "./type";
+import { spacers } from "./spacing";
 
 export const globalCss = defineGlobalStyles({
   "*": { boxSizing: "border-box" },
@@ -28,4 +29,9 @@ export const globalCss = defineGlobalStyles({
     margin: `0 0 ${base()} 0`,
   },
   li: { ...body },
+
+  ".spacer.small": { ...spacers.spacerSmall },
+  ".spacer.medium": { ...spacers.spacerMedium },
+  ".spacer.large": { ...spacers.spacerLarge },
+  ".spacer.xLarge": { ...spacers.spacerXLarge },
 });
