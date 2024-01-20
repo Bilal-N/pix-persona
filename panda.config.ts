@@ -1,14 +1,15 @@
 import { defineConfig } from "@pandacss/dev";
 import { globalCss } from "./app/css/app";
+import colors from "./app/css/colors";
+
 export default defineConfig({
   // Whether to use css reset
   preflight: false,
 
   // Where to look for your css declarations
   include: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "./pages/**/*.{js,jsx,ts,tsx}",
     "./app/**/*.{js,jsx,ts,tsx}",
+    "./app/css/**/*.{js,jsx,ts,tsx}",
     "./app/components/**/*.{js,jsx,ts,tsx}",
   ],
 
@@ -26,43 +27,44 @@ export default defineConfig({
     tokens: {
       colors: {
         bluish: {
-          value: "#01465A",
+          value: colors.bluish,
         },
         neon: {
-          value: "#EAE555",
+          value: colors.neon,
         },
         darkTeal: {
-          value: "#00273b",
+          value: colors.darkTeal,
         },
         gray: {
-          value: "#909090",
+          value: colors.gray,
         },
         black: {
-          value: "#000000",
+          value: colors.black,
         },
         white: {
-          value: "#ffffff",
+          value: colors.white,
         },
         blackAlpha60: {
-          value: "rgba(0, 0, 0, 0.6)",
+          value: colors.blackAlpha60,
         },
+      },
+      fonts: {
+        inter: { value: "var(--font-inter), sans-serif" },
       },
       spacing: {},
     },
     breakpoints: {
-      xs: "400",
-      sm: "600",
-      md: "900",
-      lg: "1120",
-      xl: "1600",
-      "2xl": "1920",
+      xs: "400px",
+      sm: "600px",
+      md: "900px",
+      lg: "1120px",
+      xl: "1600px",
+      "2xl": "1920px",
     },
   },
 
   globalCss,
-
-  outExtension: "js",
-
+  watch: true,
   // The output directory for your css system
   outdir: "styled-system",
 });

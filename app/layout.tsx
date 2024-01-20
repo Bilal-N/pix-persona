@@ -1,7 +1,14 @@
 import { GridProvider } from "@faceless-ui/css-grid";
+import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import { base } from "./css/base";
 import "./global.css";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${inter.variable}`}>
       <body>
         <GridProvider
           rowGap={{
