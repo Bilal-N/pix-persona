@@ -49,7 +49,7 @@ export const bullet = css({
   borderRadius: 20,
   zIndex: 10,
   backgroundColor: "token(colors.bluish)",
-  _before: {
+  "&::before": {
     content: "",
     position: "absolute",
     top: -3,
