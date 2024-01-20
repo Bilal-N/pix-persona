@@ -1,7 +1,7 @@
 import { GridProvider } from "@faceless-ui/css-grid";
 import type { Metadata } from "next";
 import { base } from "./css/base";
-import "./css/app.css";
+import "./global.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
