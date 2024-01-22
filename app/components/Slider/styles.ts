@@ -87,7 +87,8 @@ const arrow = css({
   width: 50,
   height: 50,
   borderRadius: 50,
-  backgroundColor: colors.neon,
+  zIndex: 3000,
+  backgroundColor: "token(colors.neon)",
   "& svg": {
     fontSize: 20,
     position: "absolute",
