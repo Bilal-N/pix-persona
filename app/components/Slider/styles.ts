@@ -51,11 +51,14 @@ const title = css({
   margin: `0 0 ${base(2)}`,
   color: "token(colors.bluish)",
 });
-const description = css({});
+const description = css({
+  color: "token(colors.black)",
+});
 const list = css({
   listStyle: "none",
   margin: 0,
   padding: 0,
+  color: "token(colors.black)",
 });
 const sliderPagination = css({
   position: "absolute",
