@@ -23,7 +23,7 @@ export const globalCss = defineGlobalStyles({
   h1: { ...h1 },
   h2: { ...h2 },
   h3: { ...h3 },
-  p: { ...body, marginBottom: base(2) },
+  p: { ...body, margin: 0, marginBottom: base(2) },
   "ol, ul": {
     padding: `0 0 0 ${base()}`,
     margin: `0 0 ${base()} 0`,
