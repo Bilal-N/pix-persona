@@ -169,7 +169,7 @@ const line = css({
   width: "100%",
   height: 1,
   opacity: 0.1,
-  backgroundColor: colors.black,
+  backgroundColor: "token(colors.black)",
   "&:nth-child(1)": {
     opacity: 0,
   },
