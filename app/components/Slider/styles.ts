@@ -16,8 +16,9 @@ export const header = css({
 });
 const sliderWrapper = css({
   position: "relative",
-  padding: `${base(14)} 0 ${base(6)}`,
+  padding: `${base(14)} ${base(2)} ${base(6)}`,
   backgroundColor: "token(colors.white)",
+  lg: { padding: `${base(14)} 0 ${base(6)}` },
 });
 const gridContainer = css({
   position: "relative",
@@ -26,6 +27,20 @@ const gridContainer = css({
 const slider = css({
   position: "relative",
   cursor: "none",
+});
+const cursorCols = css({
+  position: "absolute",
+  inset: "0 0",
+  display: "flex",
+  zIndex: 1,
+  "& .leftCol": {
+    height: "100%",
+    width: "50%",
+  },
+  "& .rightCol": {
+    height: "100%",
+    width: "50%",
+  },
 });
 const sliderTracks = css({
   position: "relative",
@@ -49,10 +64,13 @@ const title = css({
   fontSize: base(4.5),
   lineHeight: base(4.5),
   margin: `0 0 ${base(2)}`,
+  paddingRight: `${base(4)}`,
   color: "token(colors.bluish)",
 });
 const description = css({
   color: "token(colors.black)",
+  paddingTop: `${base(2)}`,
+  lg: { paddingTop: 0 },
 });
 const list = css({
   listStyle: "none",
@@ -188,6 +206,7 @@ const line = css({
 export const styles = {
   header,
   sliderWrapper,
+  cursorCols,
   gridContainer,
   slider,
   sliderTracks,

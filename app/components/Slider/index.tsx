@@ -42,7 +42,6 @@ const Slider = () => {
       : false;
 
   const goToPrevious = () => {
-    console.log(currentIndex);
     if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
   };
   const goToNext = () => {
@@ -60,6 +59,14 @@ const Slider = () => {
       <div className={styles.sliderWrapper}>
         <GridContainer classes={styles.gridContainer}>
           <div className={styles.slider}>
+            <div className={styles.cursorCols}>
+              <div className={"leftCol"} onClick={() => goToPrevious()}>
+                &nbsp;
+              </div>
+              <div className={"rightCol"} onClick={() => goToNext()}>
+                &nbsp;
+              </div>
+            </div>
             <div className={styles.sliderTracks}>
               <div
                 className={styles.slideTrack}
@@ -67,11 +74,7 @@ const Slider = () => {
               >
                 <div className={styles.slideContent}>
                   <Grid className={styles.slideContentGrid}>
-                    <Cell
-                      cols={5}
-                      className={"leftCol"}
-                      onClick={() => goToPrevious()}
-                    >
+                    <Cell cols={7}>
                       <h2 className={styles.title}>
                         <div
                           className={
@@ -121,12 +124,8 @@ const Slider = () => {
                         </div>
                       </h2>
                     </Cell>
-                    <Cell cols={2}>&nbsp;</Cell>
-                    <Cell
-                      cols={5}
-                      className={"rightCol"}
-                      onClick={() => goToNext()}
-                    >
+                    {/* <Cell cols={2}>&nbsp;</Cell> */}
+                    <Cell cols={5}>
                       <p className={styles.description}>
                         We create design systems using custom premade UI
                         components so teams can continue to use the same
@@ -150,11 +149,7 @@ const Slider = () => {
               >
                 <div className={styles.slideContent}>
                   <Grid className={styles.slideContentGrid}>
-                    <Cell
-                      cols={5}
-                      className={"leftCol"}
-                      onClick={() => goToPrevious()}
-                    >
+                    <Cell cols={7}>
                       <h2 className={styles.title}>
                         <div
                           className={
@@ -204,12 +199,8 @@ const Slider = () => {
                         </div>
                       </h2>
                     </Cell>
-                    <Cell cols={2}>&nbsp;</Cell>
-                    <Cell
-                      cols={5}
-                      className={"rightCol"}
-                      onClick={() => goToNext()}
-                    >
+                    {/* <Cell cols={2}>&nbsp;</Cell> */}
+                    <Cell cols={5}>
                       <p className={styles.description}>
                         We create design systems using custom premade UI
                         components so teams can continue to use the same
@@ -233,11 +224,7 @@ const Slider = () => {
               >
                 <div className={styles.slideContent}>
                   <Grid className={styles.slideContentGrid}>
-                    <Cell
-                      cols={5}
-                      className={"leftCol"}
-                      onClick={() => goToPrevious()}
-                    >
+                    <Cell cols={7}>
                       <h2 className={styles.title}>
                         <div
                           className={
@@ -287,12 +274,8 @@ const Slider = () => {
                         </div>
                       </h2>
                     </Cell>
-                    <Cell cols={2}>&nbsp;</Cell>
-                    <Cell
-                      cols={5}
-                      className={"rightCol"}
-                      onClick={() => goToNext()}
-                    >
+                    {/* <Cell cols={2}>&nbsp;</Cell> */}
+                    <Cell cols={5}>
                       <p className={styles.description}>
                         We create design systems using custom premade UI
                         components so teams can continue to use the same
