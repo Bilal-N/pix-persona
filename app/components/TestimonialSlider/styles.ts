@@ -30,11 +30,11 @@ const cursorCols = css({
   inset: "0 0",
   display: "flex",
   zIndex: 1,
-  "& .leftCol1": {
+  "& .leftCol2": {
     height: "100%",
     width: "50%",
   },
-  "& .rightCol1": {
+  "& .rightCol2": {
     height: "100%",
     width: "50%",
   },
