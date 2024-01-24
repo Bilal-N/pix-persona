@@ -81,7 +81,7 @@ const list = css({
 const sliderPagination = css({
   position: "absolute",
   left: 0,
-  bottom: base(-5.4),
+  bottom: base(-4.6),
   display: "flex",
   gap: 4,
 });
@@ -179,10 +179,10 @@ const lineCut = css({
 const linesContainer = css({
   position: "absolute",
   inset: "0 0",
+  top: -7,
   display: "flex",
   flexDirection: "column",
-  gap: 80,
-  paddingTop: 115,
+  gap: 90,
   zIndex: 1,
   background: "transparent",
 });
