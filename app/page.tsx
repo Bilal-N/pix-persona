@@ -4,6 +4,7 @@ import MobileAppPrototype from "./components/MobileAppPrototype";
 import Content from "./components/Content";
 import Slider from "./components/Slider";
 import TestimonialSlider from "./components/TestimonialSlider";
+import ImageSlider from "./components/ImageSlider";
 import Footer from "./components/layout/Footer";
 import colors from "./css/colors";
 
@@ -210,7 +211,7 @@ export default function Home() {
           <TestimonialSlider />
         </div>
       </section>
-      <MobileAppPrototype videoSource={"/showreel2.webm"} />
+      <ImageSlider />
       <Footer />
     </>
   );
