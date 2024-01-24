@@ -40,7 +40,7 @@ const Content = ({ data, color = null, bgColor = "initial" }) => {
                     key={index}
                   >
                     {text.children?.length > 0 &&
-                      text.children.map((item) => {
+                      text.children.map((item, index) => {
                         return (
                           <>
                             {item.type == "normal" ? (
@@ -48,6 +48,7 @@ const Content = ({ data, color = null, bgColor = "initial" }) => {
                                 className={
                                   item?.newline ? styles.newline : null
                                 }
+                                key={index}
                               >
                                 {item.text}
                               </span>
@@ -55,6 +56,7 @@ const Content = ({ data, color = null, bgColor = "initial" }) => {
                               <UnderlineOnHover
                                 content={item}
                                 classes={styles.underlineOnHover}
+                                key={index}
                               />
                             )}
                           </>
@@ -89,17 +91,24 @@ const Content = ({ data, color = null, bgColor = "initial" }) => {
                     key={index}
                   >
                     {text.children?.length > 0 &&
-                      text.children.map((item) => {
+                      text.children.map((item, index) => {
                         return (
                           <>
-                            <li className={styles.listItem}>{item.text}</li>
+                            <li className={styles.listItem} key={index}>
+                              {item.text}
+                            </li>
                           </>
                         );
                       })}
                   </ul>
                 );
               if (text?.type == "spacer")
-                return <div className={["spacer", text?.size].join(" ")}></div>;
+                return (
+                  <div
+                    className={["spacer", text?.size].join(" ")}
+                    key={index}
+                  ></div>
+                );
             })}
         </GridContainer>
         <div className={styles.linesContainer}>

@@ -62,11 +62,12 @@ const ImageSlider = () => {
             </div>
           </div>
           <div className={styles.sliderTracks}>
-            {images.map((image) => {
+            {images.map((image, index) => {
               return (
                 <div
                   className={styles.slideTrack}
                   style={{ translate: `${-100 * currentIndex}%` }}
+                  key={index}
                 >
                   <div className={styles.slideContent}>
                     <img
