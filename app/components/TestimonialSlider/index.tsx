@@ -26,8 +26,8 @@ const TestimonialSlider = ({ children = null }) => {
   }, []);
 
   // Define the selector for the area where you want to display the custom cursor
-  const selectedAreaLeft = ".leftCol";
-  const selectedAreaRight = ".rightCol";
+  const selectedAreaLeft = ".leftCol2";
+  const selectedAreaRight = ".rightCol2";
 
   // Check if the mouse is within the selected area
   const isMouseInLeftArea =
@@ -57,10 +57,10 @@ const TestimonialSlider = ({ children = null }) => {
           <GridContainer>
             <div className={styles.slider}>
               <div className={styles.cursorCols}>
-                <div className={"leftCol1"} onClick={() => goToPrevious()}>
+                <div className={"leftCol2"} onClick={() => goToPrevious()}>
                   &nbsp;
                 </div>
-                <div className={"rightCol1"} onClick={() => goToNext()}>
+                <div className={"rightCol2"} onClick={() => goToNext()}>
                   &nbsp;
                 </div>
               </div>
