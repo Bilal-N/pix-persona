@@ -14,6 +14,15 @@ export const keyframes = defineKeyframes({
       transform: "translateX(0)",
     },
   },
+  fadeInRight: {
+    "0%": {
+      transform: "translateX(100px)",
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateX(0)",
+    },
+  },
   textFadeOut: {
     "0%": {
       transform: "translateX(0)",
@@ -29,6 +38,16 @@ export const keyframes = defineKeyframes({
     },
     "100%": {
       width: "100%",
+    },
+  },
+  expandHeight: {
+    "0%": {
+      height: 0,
+      // opacity: 0,
+    },
+    "100%": {
+      height: "505px",
+      // opacity: 1,
     },
   },
 });

@@ -16,7 +16,7 @@ export const globalCss = defineGlobalStyles({
     fontWeight: "bold",
     fontSize: htmlFontSize * 0.6,
     lineHeight: `${baselinePX}px`,
-    height: "100%",
+    // height: "100%",
     sm: { fontSize: htmlFontSize * 0.8 },
     md: { fontSize: htmlFontSize },
   },
@@ -32,6 +32,7 @@ export const globalCss = defineGlobalStyles({
   button: {
     margin: 0,
     padding: 0,
+    cursor: "pointer",
     border: "none",
     background: "none",
   },

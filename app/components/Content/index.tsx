@@ -2,7 +2,6 @@ import GridContainer from "../layout/GridContainer";
 import UnderlineOnHover from "../animations/UnderlineOnHover";
 import { styles } from "./styles";
 import { cx } from "../../../styled-system/css";
-// import Modal from "../Modal";
 
 const Content = ({ data, color = null, bgColor = "initial" }) => {
   return (
@@ -166,8 +165,6 @@ const Content = ({ data, color = null, bgColor = "initial" }) => {
           ></span>
         </div>
       </div>
-
-      {/* <Modal></Modal> */}
     </section>
   );
 };
