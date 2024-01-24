@@ -87,16 +87,6 @@ const TestimonialSlider = ({ children = null }) => {
                             }}
                           />
                         </div>
-                        <div style={{ paddingBottom: `${base(4)}` }}>
-                          <Image
-                            alt="Mobile App Prototype"
-                            src={partners}
-                            style={{
-                              maxWidth: "100%",
-                              height: "auto",
-                            }}
-                          />
-                        </div>
                       </p>
                     </Cell>
                     <Cell cols={1}>&nbsp;</Cell>
