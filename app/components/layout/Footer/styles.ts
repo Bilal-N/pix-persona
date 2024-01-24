@@ -69,7 +69,6 @@ export const actionText = css({
 });
 
 export const callToAction = css({
-  all: "unset",
   padding: 16,
   borderRadius: 8,
   cursor: "pointer",

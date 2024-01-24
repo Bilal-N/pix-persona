@@ -29,6 +29,12 @@ export const globalCss = defineGlobalStyles({
     margin: `0 0 ${base()} 0`,
   },
   li: { ...body },
+  button: {
+    margin: 0,
+    padding: 0,
+    border: "none",
+    background: "none",
+  },
 
   ".spacer.small": { ...spacers.spacerSmall },
   ".spacer.medium": { ...spacers.spacerMedium },
