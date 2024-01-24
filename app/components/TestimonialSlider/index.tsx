@@ -8,7 +8,6 @@ import { Grid, Cell } from "@faceless-ui/css-grid";
 import { styles } from "./styles";
 import { LeftArrow } from "../graphics/LeftArrow";
 import ratingStarsImage from "../../../public/rating-stars.png";
-import partners from "../../../public/partners.png";
 import { base } from "../../css/base";
 
 const TestimonialSlider = ({ children = null }) => {
@@ -49,112 +48,150 @@ const TestimonialSlider = ({ children = null }) => {
     if (currentIndex > 0) setCurrentIndex(currentIndex - 1);
   };
   const goToNext = () => {
-    if (currentIndex < 2) setCurrentIndex(currentIndex + 1);
+    if (currentIndex < 1) setCurrentIndex(currentIndex + 1);
   };
   return (
     <section>
-      <div className={styles.sliderWrapper}>
-        <GridContainer>
-          <div className={styles.slider}>
-            <div className={styles.sliderTracks}>
-              <div
-                className={styles.slideTrack}
-                style={{ translate: `${-100 * currentIndex}%` }}
-              >
-                <div className={styles.slideContent}>
-                  <Grid className={styles.slideContentGrid}>
-                    <Cell
-                      cols={11}
-                      className={"leftCol"}
-                      onClick={() => goToPrevious()}
-                    >
-                      <h2 className={styles.title}>
-                        They were hyper- focused and diligent and stood out for
-                        their attention to detail.
-                      </h2>
-                      <p className={styles.description}>
-                        Maxine Ryan, PRSPR{" "}
-                        <span style={{ color: "#5a5a5a" }}>
-                          (Financial literacy app)
-                        </span>
-                        <div style={{ paddingBottom: `${base(4)}` }}>
-                          <Image
-                            alt="Mobile App Prototype"
-                            src={ratingStarsImage}
-                            style={{
-                              maxWidth: "100%",
-                              height: "auto",
-                            }}
-                          />
-                        </div>
-                      </p>
-                    </Cell>
-                    <Cell cols={1}>&nbsp;</Cell>
-                  </Grid>
+      <div className={styles.contentWrapper}>
+        <div className={styles.sliderWrapper}>
+          <GridContainer>
+            <div className={styles.slider}>
+              <div className={styles.cursorCols}>
+                <div className={"leftCol1"} onClick={() => goToPrevious()}>
+                  &nbsp;
+                </div>
+                <div className={"rightCol1"} onClick={() => goToNext()}>
+                  &nbsp;
                 </div>
               </div>
-            </div>
-            <div className={styles.cursor}>
-              {isMouseInLeftArea ? (
-                <span
-                  className={cx(styles.arrow, styles.arrowLeft)}
-                  style={{ left: `${position.x}px`, top: `${position.y}px` }}
+              <div className={styles.sliderTracks}>
+                <div
+                  className={styles.slideTrack}
+                  style={{ translate: `${-100 * currentIndex}%` }}
                 >
-                  <LeftArrow />
-                </span>
-              ) : isMouseInRightArea ? (
-                <span
-                  className={cx(styles.arrow, styles.arrowRight)}
-                  style={{ left: `${position.x}px`, top: `${position.y}px` }}
+                  <div className={styles.slideContent}>
+                    <Grid className={styles.slideContentGrid}>
+                      <Cell cols={11} onClick={() => goToPrevious()}>
+                        <h2 className={styles.title}>
+                          They were hyper- focused and diligent and stood out
+                          for their attention to detail.
+                        </h2>
+                        <p className={styles.description}>
+                          Maxine Ryan, PRSPR{" "}
+                          <span style={{ color: "#5a5a5a" }}>
+                            (Financial literacy app)
+                          </span>
+                          <div style={{ paddingBottom: `${base(4)}` }}>
+                            <Image
+                              alt="Mobile App Prototype"
+                              src={ratingStarsImage}
+                              style={{
+                                maxWidth: "100%",
+                                height: "auto",
+                              }}
+                            />
+                          </div>
+                        </p>
+                      </Cell>
+                      <Cell cols={1}>&nbsp;</Cell>
+                    </Grid>
+                  </div>
+                </div>
+                <div
+                  className={styles.slideTrack}
+                  style={{ translate: `${-100 * currentIndex}%` }}
                 >
-                  <LeftArrow />
-                </span>
-              ) : null}
+                  <div className={styles.slideContent}>
+                    <Grid className={styles.slideContentGrid}>
+                      <Cell cols={11} onClick={() => goToPrevious()}>
+                        <h2 className={styles.title}>
+                          Pixel Persona really understands the digital realm.
+                        </h2>
+                        <p className={styles.description}>
+                          Maxine Ryan, PRSPR{" "}
+                          <span style={{ color: "#5a5a5a" }}>
+                            (Financial literacy app)
+                          </span>
+                          <div style={{ paddingBottom: `${base(4)}` }}>
+                            <Image
+                              alt="Mobile App Prototype"
+                              src={ratingStarsImage}
+                              style={{
+                                maxWidth: "100%",
+                                height: "auto",
+                              }}
+                            />
+                          </div>
+                        </p>
+                      </Cell>
+                      <Cell cols={1}>&nbsp;</Cell>
+                    </Grid>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.cursor}>
+                {isMouseInLeftArea ? (
+                  <span
+                    className={cx(styles.arrow, styles.arrowLeft)}
+                    style={{ left: `${position.x}px`, top: `${position.y}px` }}
+                  >
+                    <LeftArrow />
+                  </span>
+                ) : isMouseInRightArea ? (
+                  <span
+                    className={cx(styles.arrow, styles.arrowRight)}
+                    style={{ left: `${position.x}px`, top: `${position.y}px` }}
+                  >
+                    <LeftArrow />
+                  </span>
+                ) : null}
+              </div>
             </div>
+          </GridContainer>
+        </div>
+        <div style={{ position: "relative" }}>
+          <GridContainer classes={styles.gridContainer}>
+            <div>
+              <p
+                style={{
+                  fontSize: base(4.5),
+                  lineHeight: base(5),
+                  fontWeight: 600,
+                  color: "white",
+                }}
+              >
+                Thanks to seamless collaboration and a great pool of talent with
+                no geographical limitations.
+              </p>
+              <p
+                style={{
+                  fontSize: base(),
+                  lineHeight: 1.4,
+                  fontWeight: 300,
+                  color: "#c9c9c9",
+                }}
+              >
+                You get a dedicated producer and a fantastic team of people with
+                vested knowledge in your business dedicated to your needs,
+                whether its just for a single project or an ongoing engagement.
+                Over 15 years of remote collaboration facilitates communication
+                and productivity among a dispersed team of employees.
+              </p>
+            </div>
+          </GridContainer>
+          <div
+            className={styles.linesContainer}
+            style={{ top: -116, gap: 100 }}
+          >
+            <span className={styles.line} style={{ opacity: 0.04 }}></span>
+            <span className={styles.line}></span>
+            <span className={styles.line}></span>
+            <span className={styles.line}></span>
+            <span className={styles.line}></span>
+            <span className={styles.line}></span>
+            <span className={styles.line}></span>
+            <span className={styles.line}></span>
           </div>
-        </GridContainer>
-      </div>
-      <div style={{ position: "relative" }}>
-        <GridContainer classes={styles.gridContainer}>
-          <div>
-            <p
-              style={{
-                fontSize: base(3.5),
-                lineHeight: base(3.5),
-                fontWeight: 600,
-                color: "white",
-              }}
-            >
-              Thanks to seamless collaboration and a great pool of talent with
-              no geographical limitations.
-            </p>
-            <p
-              style={{
-                fontSize: base(),
-                lineHeight: 1.4,
-                fontWeight: 300,
-                color: "#c9c9c9",
-              }}
-            >
-              You get a dedicated producer and a fantastic team of people with
-              vested knowledge in your business dedicated to your needs, whether
-              its just for a single project or an ongoing engagement. Over 15
-              years of remote collaboration facilitates communication and
-              productivity among a dispersed team of employees.
-            </p>
-          </div>
-        </GridContainer>
-        <div className={styles.linesContainer}>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
-          <span className={styles.line}></span>
         </div>
       </div>
     </section>

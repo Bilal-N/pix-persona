@@ -6,19 +6,38 @@ export const baselinePX = 20;
 export const base = (multiplier = 1): string =>
   `${(baselinePX / htmlFontSize) * multiplier}rem`;
 
+const contentWrapper = css({
+  padding: `0 0 ${base(8)}`,
+});
 const sliderWrapper = css({
-  padding: `${base(5)} 0 ${base(6)}`,
+  padding: `${base(5)} ${base(2.5)} ${base(6)}`,
   color: "token(colors.white)",
   backgroundColor: "token(colors.black)",
+  lg: { padding: `${base(5)} 0 ${base(6)}` },
 });
 const gridContainer = css({
   position: "relative",
-  padding: `0 0 ${base(6)}`,
+  padding: `0 0 ${base()}`,
   zIndex: 2,
+  lg: { padding: `0  ${base(6)}` },
 });
 const slider = css({
   position: "relative",
   cursor: "none",
+});
+const cursorCols = css({
+  position: "absolute",
+  inset: "0 0",
+  display: "flex",
+  zIndex: 1,
+  "& .leftCol1": {
+    height: "100%",
+    width: "50%",
+  },
+  "& .rightCol1": {
+    height: "100%",
+    width: "50%",
+  },
 });
 const sliderTracks = css({
   position: "relative",
@@ -39,7 +58,7 @@ const slideContentGrid = css({
 const title = css({
   fontSize: base(4.5),
   fontWeight: 600,
-  lineHeight: base(4.5),
+  lineHeight: base(5),
 });
 const description = css({});
 const list = css({
@@ -96,10 +115,12 @@ const leftCol = css({});
 const linesContainer = css({
   position: "absolute",
   inset: "0 0",
+  top: 0,
   display: "flex",
   flexDirection: "column",
+  flexWrap: "nowrap",
+  overflow: "hidden",
   gap: 40,
-  paddingTop: 0,
   zIndex: 1,
   background: "transparent",
 });
@@ -132,4 +153,6 @@ export const styles = {
   leftCol,
   linesContainer,
   line,
+  cursorCols,
+  contentWrapper,
 };
