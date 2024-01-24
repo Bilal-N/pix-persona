@@ -44,13 +44,12 @@ export const clickablePrototype = css({
 export const bullet = css({
   position: "relative",
   display: "inline-block",
-  width: 20,
-  height: 20,
+  width: 18,
+  height: 18,
   borderRadius: 20,
   zIndex: 10,
   backgroundColor: "token(colors.bluish)",
-  "&::before": {
-    content: "",
+  "& > i": {
     position: "absolute",
     top: -3,
     left: -3,
