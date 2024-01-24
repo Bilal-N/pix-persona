@@ -21,7 +21,9 @@ const Footer = () => {
             </h3>
             <div className={clickablePrototypeContainer}>
               <div className={clickablePrototype}>
-                <span className={bullet}></span>
+                <span className={bullet}>
+                  <i></i>
+                </span>
                 <span className={actionText}>
                   I want to create a clickable prototype
                 </span>
