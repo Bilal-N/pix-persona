@@ -33,6 +33,9 @@ export default defineConfig({
         neon: {
           value: colors.neon,
         },
+        neonLight: {
+          value: colors.neonLight,
+        },
         darkTeal: {
           value: colors.darkTeal,
         },
@@ -60,8 +63,8 @@ export default defineConfig({
       // },
       zIndex: {
         page: { value: 10 },
-        modal: { value: 20 },
         header: { value: 30 },
+        modal: { value: 40 },
       },
     },
     breakpoints: {
