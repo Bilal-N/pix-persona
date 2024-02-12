@@ -51,6 +51,76 @@ const step = css({
     display: "none !important",
   },
 });
+const stepContent = css({
+  "&:not(.active)": {
+    display: "none !important",
+  },
+});
+const stepOptions = css({
+  animation: "fadeInRight 1s ease 0s 1 normal forwards",
+  "&:not(.active)": {
+    display: "none !important",
+  },
+});
+const optionsList = css({
+  listStyle: "none",
+  margin: `${base(1)} 0 ${base(2)} 0`,
+  padding: 0,
+  userSelect: "none",
+  "& li": {
+    fontSize: base(1.5),
+    fontWeight: "600",
+    display: "flex",
+    alignItems: "center",
+    gap: 20,
+    padding: `${base(0.5)} 0`,
+    cursor: "pointer",
+    color: "token(colors.black)",
+  },
+  "& li .marker": {
+    position: "relative",
+    width: 18,
+    height: 18,
+    borderRadius: 20,
+    backgroundColor: "token(colors.black)",
+  },
+  "& li .marker i": {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    display: "block",
+    width: 14,
+    height: 14,
+    borderRadius: 20,
+    zIndex: 3,
+    transition: "transform 0.2s",
+    transform: "translateX(-50%) translateY(-50%) scale(0)",
+    backgroundColor: "token(colors.neon)",
+  },
+  "& li:not(.selected) .marker i": {
+    transform: "translateX(-50%) translateY(-50%) scale(1)",
+  },
+  "& li .text": {
+    position: "relative",
+    transition: "color 0.2s",
+  },
+  "& li.selected .text": {
+    color: "token(colors.bluish)",
+  },
+  "& li.selected .marker": {
+    backgroundColor: "token(colors.bluish)",
+  },
+  // "& li.selected .text i": {
+  //   position: "absolute",
+  //   top: "52%",
+  //   left: 0,
+  //   transform: "translateY(-50%)",
+  //   display: "block",
+  //   height: 2,
+  //   animation: "lineThrough 0.5s ease 0s 1 normal forwards",
+  //   backgroundColor: "token(colors.bluish)",
+  // },
+});
 const back = css({
   fontSize: base(0.8),
   fontWeight: 400,
@@ -113,6 +183,18 @@ export const button = css({
     backgroundColor: "token(colors.neonLight)",
   },
 });
+export const inputControl = css({
+  fontSize: base(0.8),
+  padding: `${base(1)} ${base(1.5)}`,
+  fontWeight: 300,
+  border: "none",
+  borderRadius: 8,
+  opacity: 0,
+  outline: "none",
+  color: "token(colors.bluish)",
+  backgroundColor: "token(colors.neonLight)",
+  animation: "fadeInRight 1s ease 0.1s 1 normal forwards",
+});
 const linesContainer = css({
   position: "absolute",
   inset: "0 0",
@@ -139,9 +221,13 @@ export const styles = {
   footer,
   steps,
   step,
+  stepContent,
+  stepOptions,
+  optionsList,
   heading,
   userAction,
   button,
+  inputControl,
   linesContainer,
   line,
   gridContainer,
