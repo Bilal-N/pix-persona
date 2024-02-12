@@ -46,7 +46,7 @@ export const keyframes = defineKeyframes({
       // opacity: 0,
     },
     "100%": {
-      height: "505px",
+      height: "555px",
       // opacity: 1,
     },
   },
