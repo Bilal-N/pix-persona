@@ -1,6 +1,7 @@
 import { GridProvider } from "@faceless-ui/css-grid";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { base } from "./css/base";
 import "./global.css";
 
@@ -47,6 +48,7 @@ export default function RootLayout({
           {children}
         </GridProvider>
       </body>
+      <GoogleAnalytics gaId="G-2RHS1EKZ2M" />
     </html>
   );
 }
