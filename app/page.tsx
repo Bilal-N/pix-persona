@@ -17,19 +17,19 @@ export default function Home() {
       children: [
         {
           type: "normal", // underlineOnHover | normal
-          text: "We deliver ",
+          text: "We transform ",
         },
         {
           type: "underlineOnHover",
-          text: "clickable ",
+          text: "web ",
         },
         {
           type: "underlineOnHover",
-          text: "design prototypes",
+          text: "and app experiences,",
         },
         {
           type: "normal",
-          text: " early on, build awesome ",
+          text: " create amazing ",
         },
         {
           type: "underlineOnHover",
@@ -37,11 +37,19 @@ export default function Home() {
         },
         {
           type: "normal",
-          text: " and transform ",
+          text: " and deliver ",
         },
         {
           type: "underlineOnHover",
-          text: "web & app experiences.",
+          text: " clickable ",
+        },
+        {
+          type: "underlineOnHover",
+          text: "design prototypes ",
+        },
+        {
+          type: "normal",
+          text: "early on.",
         },
       ],
     },
