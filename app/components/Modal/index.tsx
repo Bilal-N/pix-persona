@@ -5,10 +5,12 @@ import GridContainer from "../layout/GridContainer";
 import Header from "../layout/Header";
 import { cx } from "../../../styled-system/css";
 import { BackArrow } from "../graphics/BackArrow";
+import { US, UK, PK } from "../graphics/flags";
 import { Refresh } from "../graphics/Refresh";
 import { Close } from "../graphics/Close";
 import colors from "../../css/colors";
 import { styles } from "./styles";
+import Link from "next/link";
 
 const Modal = ({ children = null, dialogClasses = [], onClose }) => {
   const [step, setStep] = useState(1);
@@ -97,7 +99,7 @@ const Modal = ({ children = null, dialogClasses = [], onClose }) => {
                       className={cx(styles.button, "light")}
                       onClick={() => handleOtherOptions(3)}
                     >
-                      Other Options
+                      Contact Details
                     </button>
                   </div>
                 </div>
@@ -112,7 +114,7 @@ const Modal = ({ children = null, dialogClasses = [], onClose }) => {
                       return (
                         <>
                           <ul className={styles.optionsList} key={sIndex}>
-                            {list.map((item, iIndex) => {
+                            {/* {list.map((item, iIndex) => {
                               return (
                                 <li
                                   className={item.completed ? "selected" : null}
@@ -130,13 +132,42 @@ const Modal = ({ children = null, dialogClasses = [], onClose }) => {
                                   </span>
                                 </li>
                               );
-                            })}
+                            })} */}
+                            <li>
+                              Email:{" "}
+                              <a
+                                href="mailto:info@pixelpersona.co"
+                                className={styles.link}
+                              >
+                                info@pixelpersona.co
+                              </a>
+                            </li>
+                            <li>
+                              Contact:{" "}
+                              <a
+                                href="tel:+1 (619) 928-5168"
+                                className={styles.link}
+                              >
+                                +1 (619) 928-5168
+                              </a>
+                            </li>
+                            <li>
+                              Offices:{" "}
+                              <span style={{ display: "flex", gap: 10 }}>
+                                <US />
+                                <UK />
+                                <PK />
+                              </span>
+                            </li>
                           </ul>
+
                           <button
                             className={styles.button}
                             onClick={() => setStepOptions(false)}
                           >
-                            Done
+                            <Link href="/book-a-meeting" className="link">
+                              Book a Meeting
+                            </Link>
                           </button>
                         </>
                       );
@@ -175,7 +206,7 @@ const Modal = ({ children = null, dialogClasses = [], onClose }) => {
                       className={cx(styles.button, "light")}
                       onClick={() => handleOtherOptions(3)}
                     >
-                      Other Options
+                      Contact Details
                     </button>
                   </div>
                 </div>
@@ -190,7 +221,7 @@ const Modal = ({ children = null, dialogClasses = [], onClose }) => {
                       return (
                         <>
                           <ul className={styles.optionsList} key={sIndex}>
-                            {list.map((item, iIndex) => {
+                            {/* {list.map((item, iIndex) => {
                               return (
                                 <li
                                   className={item.completed ? "selected" : null}
@@ -208,13 +239,42 @@ const Modal = ({ children = null, dialogClasses = [], onClose }) => {
                                   </span>
                                 </li>
                               );
-                            })}
+                            })} */}
+                            <li>
+                              Email:{" "}
+                              <a
+                                href="mailto:info@pixelpersona.co"
+                                className={styles.link}
+                              >
+                                info@pixelpersona.co
+                              </a>
+                            </li>
+                            <li>
+                              Contact:{" "}
+                              <a
+                                href="tel:+1 (619) 928-5168"
+                                className={styles.link}
+                              >
+                                +1 (619) 928-5168
+                              </a>
+                            </li>
+                            <li>
+                              Offices:{" "}
+                              <span style={{ display: "flex", gap: 10 }}>
+                                <US />
+                                <UK />
+                                <PK />
+                              </span>
+                            </li>
                           </ul>
+
                           <button
                             className={styles.button}
                             onClick={() => setStepOptions(false)}
                           >
-                            Done
+                            <Link href="/book-a-meeting" className="link">
+                              Book a Meeting
+                            </Link>
                           </button>
                         </>
                       );

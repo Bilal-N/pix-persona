@@ -165,6 +165,10 @@ const heading = css({
   color: "token(colors.black)",
   animation: "fadeInRight 1s ease 0s 1 normal forwards",
 });
+const link = css({
+  textDecoration: "none",
+  color: "token(colors.bluish)",
+});
 const userAction = css({
   color: "token(colors.bluish)",
 });
@@ -181,6 +185,10 @@ export const button = css({
   "&.light": {
     color: "token(colors.bluish)",
     backgroundColor: "token(colors.neonLight)",
+  },
+  "& .link": {
+    textDecoration: "none",
+    color: "token(colors.white)",
   },
 });
 export const inputControl = css({
@@ -217,6 +225,7 @@ export const styles = {
   modalWindow,
   modalDialog,
   header,
+  link,
   body,
   footer,
   steps,

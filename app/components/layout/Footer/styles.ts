@@ -75,3 +75,30 @@ export const callToAction = css({
   color: "token(colors.black)",
   backgroundColor: "token(colors.neon)",
 });
+export const contactDetails = css({
+  padding: `${base(1.8)} ${base(2)}`,
+  cursor: "pointer",
+  color: "token(colors.white)",
+  backgroundColor: "token(colors.black)",
+  "& ul": {
+    display: "flex",
+    gap: 20,
+    justifyContent: "flex-end",
+    alignItems: "center",
+    listStyle: "none",
+  },
+  "& li span": {
+    lineHeight: 0,
+  },
+  "& li": {
+    display: "flex",
+    alignItems: "center",
+    gap: 10,
+  },
+  "& a": {
+    position: "relative",
+    zIndex: 100,
+    textDecoration: "none",
+    color: "token(colors.white)",
+  },
+});

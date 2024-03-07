@@ -1,6 +1,7 @@
 import GridContainer from "../components/layout/GridContainer";
 import { Grid, Cell } from "@faceless-ui/css-grid";
 import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
 import HeroSection from "../components/HeroSection";
 import { styles } from "./styles";
 
@@ -29,6 +30,7 @@ export default function BookAMeeting() {
           </GridContainer>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

@@ -11,7 +11,10 @@ import {
   bullet,
   actionText,
   callToAction,
+  contactDetails,
 } from "./styles";
+import { Phone } from "../../graphics/Phone";
+import { Mail } from "../../graphics/Mail";
 
 const Footer = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -59,6 +62,20 @@ const Footer = () => {
             </div>
           </Cell>
         </Grid>
+      </div>
+      <div className={contactDetails}>
+        <ul>
+          <li>
+            <span>
+              <Phone color={"white"} />
+            </span>
+            <a href="tel:+1 (619) 928-5168">+1 (619) 928-5168</a>
+          </li>
+          <li>
+            <Mail color={"white"} />
+            <a href="mailto:info@pixelpersona.co">info@pixelpersona.co</a>
+          </li>
+        </ul>
       </div>
       {openModal && <Modal onClose={() => setOpenModal(false)}></Modal>}
     </footer>
