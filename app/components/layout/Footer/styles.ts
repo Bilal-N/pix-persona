@@ -21,7 +21,7 @@ export const title = css({
 });
 export const clickablePrototypeContainer = css({
   position: "fixed",
-  bottom: 50,
+  bottom: 80,
   display: "flex",
   width: "100%",
   margin: "0 auto",
@@ -76,16 +76,18 @@ export const callToAction = css({
   backgroundColor: "token(colors.neon)",
 });
 export const contactDetails = css({
-  padding: `${base(1.8)} ${base(2)}`,
+  padding: `${base(1)} ${base(2)} ${base(0.2)}`,
   cursor: "pointer",
   color: "token(colors.white)",
   backgroundColor: "token(colors.black)",
+  xl: { padding: `${base(1.8)} ${base(2)}` },
   "& ul": {
     display: "flex",
     gap: 20,
-    justifyContent: "flex-end",
+    justifyContent: "center",
     alignItems: "center",
     listStyle: "none",
+    xl: { justifyContent: "flex-end" },
   },
   "& li span": {
     lineHeight: 0,
@@ -96,9 +98,11 @@ export const contactDetails = css({
     gap: 10,
   },
   "& a": {
+    fontSize: base(0.8),
     position: "relative",
     zIndex: 100,
     textDecoration: "none",
     color: "token(colors.white)",
+    xl: { fontSize: base(1.1) },
   },
 });
