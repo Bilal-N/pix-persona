@@ -208,11 +208,11 @@ export default function Home() {
     <>
       <Header />
       <HeroSection />
-      <MobileAppPrototype videoSource={"/showreel.m4v"} />
+      <MobileAppPrototype videoSource={"/showreel.webm"} />
       <Content data={content1} color={colors.white} bgColor={colors.bluish} />
       <Slider />
       <Content data={content2} color={colors.black} bgColor={colors.white} />
-      <MobileAppPrototype videoSource={"/showreel2.m4v"} />
+      <MobileAppPrototype videoSource={"/showreel2.webm"} />
       <Content data={content3} bgColor={colors.white} />
       <section>
         <div style={{ backgroundColor: "black" }}>
