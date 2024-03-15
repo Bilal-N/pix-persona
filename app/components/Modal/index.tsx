@@ -11,6 +11,7 @@ import { Close } from "../graphics/Close";
 import colors from "../../css/colors";
 import { styles } from "./styles";
 import Link from "next/link";
+import { toast } from 'react-hot-toast';
 
 const Modal = ({ children = null, dialogClasses = [], onClose }) => {
   const [step, setStep] = useState(1);
@@ -19,6 +20,11 @@ const Modal = ({ children = null, dialogClasses = [], onClose }) => {
     [{ text: "Coming Soon", completed: false }],
     [{ text: "Coming Soon", completed: false }],
   ]);
+  const [contactData, setContactData] = useState({
+    name: "",
+    email: "",
+    contactNumber: "",
+  });
   const handleStepChange = (step) => {
     setStep(step);
     setStepOptions(false);
@@ -31,6 +37,30 @@ const Modal = ({ children = null, dialogClasses = [], onClose }) => {
     stepListItems[stepIndex][itemIndex].completed =
       !stepListItems[stepIndex][itemIndex].completed;
     setStepListItems(updatedList);
+  };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setContactData({ ...contactData, [name]: value });
+  };
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    console.log(contactData);
+    const response = await fetch("api/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(contactData),
+    });
+
+    if (response.status == 200) {
+      setContactData({
+        name: "",
+        email: "",
+        contactNumber: "",
+      });
+      toast.success('Email sent successfully');
+    }
   };
   return (
     <div className={styles.modalWindow}>
@@ -293,7 +323,7 @@ const Modal = ({ children = null, dialogClasses = [], onClose }) => {
                   websites and apps for companies of all sizes, from startups to
                   Fortune 500s. 🤝
                 </h2>
-                <form>
+                <form onSubmit={sendEmail}>
                   <div style={{ display: "flex", gap: 10, marginBottom: 20 }}>
                     {/* <button
                       className={styles.button}
@@ -304,23 +334,26 @@ const Modal = ({ children = null, dialogClasses = [], onClose }) => {
                     <input
                       type="text"
                       className={styles.inputControl}
+                      name="name"
                       placeholder="Name"
+                      onChange={handleChange}
                     />
                     <input
                       type="email"
                       className={styles.inputControl}
+                      name="email"
                       placeholder="Email"
+                      onChange={handleChange}
                     />
                     <input
                       type="text"
                       className={styles.inputControl}
+                      name="contactNumber"
                       placeholder="Contact Number"
+                      onChange={handleChange}
                     />
                   </div>
-                  <button
-                    className={styles.button}
-                    onClick={() => handleStepChange(3)}
-                  >
+                  <button type="submit" className={styles.button}>
                     Submit
                   </button>
                 </form>

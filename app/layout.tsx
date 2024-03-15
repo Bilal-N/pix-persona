@@ -2,6 +2,7 @@ import { GridProvider } from "@faceless-ui/css-grid";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Toaster } from "react-hot-toast";
 import { base } from "./css/base";
 import "./global.css";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
             xl: 12,
           }}
         >
+          <Toaster position="bottom-center" />
           {children}
         </GridProvider>
       </body>
