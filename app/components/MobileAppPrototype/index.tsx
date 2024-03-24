@@ -3,7 +3,7 @@ import Image from "next/image";
 import mobileAppPrototypeImage from "../../../public/mobile-app-prototype.png";
 import { mobileAppPrototype } from "./styles";
 
-const MobileAppPrototype = ({ videoSource }) => {
+const MobileAppPrototype = ({ videoSource1, videoSource2 }) => {
   return (
     <section>
       <div className={mobileAppPrototype}>
@@ -12,13 +12,15 @@ const MobileAppPrototype = ({ videoSource }) => {
           autoPlay={true}
           preload="metadata"
           playsInline={true}
-          src={videoSource}
           muted={true}
           style={{
             maxWidth: "100%",
             height: "auto",
           }}
-        ></video>
+        >
+          <source src={videoSource1} type="video/webm" />
+          <source src={videoSource2} type="video/mp4" />
+        </video>
       </div>
     </section>
   );
