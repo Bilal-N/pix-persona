@@ -1,6 +1,6 @@
 import Header from "./components/layout/Header";
 import HeroSection from "./components/HeroSection";
-import MobileAppPrototype from "./components/MobileAppPrototype";
+import VideoEmbed from "./components/VideoEmbed";
 import Content from "./components/Content";
 import Slider from "./components/Slider";
 import TestimonialSlider from "./components/TestimonialSlider";
@@ -208,17 +208,11 @@ export default function Home() {
     <>
       <Header />
       <HeroSection />
-      <MobileAppPrototype
-        videoSource1={"/showreel.webm"}
-        videoSource2={"/showreel.mp4"}
-      />
+      <VideoEmbed source="https://player.vimeo.com/video/927075848?badge=0&amp;autopause=0&autoplay=1&loop=1&title=0&texttrack=0&controls=0&muted=1&amp;player_id=0&amp;app_id=58479" />
       <Content data={content1} color={colors.white} bgColor={colors.bluish} />
       <Slider />
       <Content data={content2} color={colors.black} bgColor={colors.white} />
-      <MobileAppPrototype
-        videoSource1={"/showreel2.webm"}
-        videoSource2={"/showreel2.mp4"}
-      />
+      <VideoEmbed source="https://player.vimeo.com/video/926697199?badge=0&amp;autopause=0&autoplay=1&loop=1&title=0&texttrack=0&controls=0&muted=1&amp;player_id=0&amp;app_id=58479" />
       <Content data={content3} bgColor={colors.white} />
       <section>
         <div style={{ backgroundColor: "black" }}>
