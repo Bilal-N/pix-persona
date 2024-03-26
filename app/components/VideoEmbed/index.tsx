@@ -6,6 +6,8 @@ const VideoEmbed = ({ source }) => {
       <div className={mobileAppPrototype}>
         <span></span>
         <iframe
+          loading="lazy"
+          height="1080"
           src={source}
           allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
           title="showreel2"
